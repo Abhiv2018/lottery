@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lottery Number Generator</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="boostrap/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+	
+		<div id="Name" class="text-center">
+		<br><br><p><b>Lucky follower Lottery</b> </p>
+			
+		</div>
+	<div class="container">
+		<div class="row">
+		<div class="col-xs-12 col-md-12 col-md-offset-0.5">
+		<div class="state">Kandivali</div>
+		<p class="statement">5 <br> Lucky<br> wwinners <br></p>
+		<p class="center">quick pick</p>
+		<div class="numbers">
+			<div class="row">
+				<div id="num1" class="ball col-md-2"><span id="one"></span></div>
+				<div id="num2" class="ball col-md-2"><span id="two"></span></div>
+				<div id="num3" class="ball col-md-2"><span id="three"></span></div>
+				<div id="num4" class="ball col-md-2"><span id="four"></span></div>
+				<div id="num5" class="ball col-md-2"><span id="five"></span></div>
+			</div>
+			
+		</div>
+</div>
+
+	</div>
+		<button class="btn-success" onclick="random()">Pick the Winners!</button>
+	</div>
+	
+	
+	<script>
+		
+		//CREATES A FUNCTION THAT CREATES A RANDOM NUMBER AND PUTS IT IN THE CIRCLE
+	function random(){
+		//SELECT THE FIVE CIRCLES ON THE PAGE
+		var one= document.getElementById('one');
+		var two= document.getElementById('two');
+		var three= document.getElementById('three');
+		var four= document.getElementById('four');
+		var five= document.getElementById('five');
+		var six= document.getElementById('six');
+
+		//CREATE A RANDOM NUMBER FOR EACH OF THE CIRCLES
+		var a = Math.floor(Math.random()*500);
+		var b = Math.floor(Math.random()*500);
+		var c = Math.floor(Math.random()*500);
+		var d = Math.floor(Math.random()*500);
+		var e = Math.floor(Math.random()*500);
+		var f = Math.floor(Math.random()*500);
+		
+		//PUT RANDOM NUMBERS TO EACH OF THE CIRCLES
+		one.textContent = a;
+		two.textContent = b;
+		three.textContent = c;
+		four.textContent = d;
+		five.textContent = e;
+
+		//THIS ONE IS DIFFERENT BECAUSE THE CIRCLE IS RED
+		six.style.color = 'black';
+		six.textContent = f;
+
+	}
+
+	
+	
+	</script>
+	
+</body>
+</html>
